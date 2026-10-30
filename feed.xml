@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>DailyPri</title>
+    <link>https://apri69.github.io/DailyPri/</link>
+    <description>Tägliches Morgen-Briefing zu Euro-Anleihen, EZB und Makro – nur öffentliche Quellen.</description>
+    <language>de</language>
+    <itunes:author>André Prietzel</itunes:author>
+    <itunes:image href="https://apri69.github.io/DailyPri/cover.png"/>
+    <itunes:category text="Business"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:block>Yes</itunes:block>
+    <item>
+      <title>DailyPri – 30.10.2026</title>
+      <enclosure url="https://apri69.github.io/DailyPri/2026-10-30.mp3" length="3091248" type="audio/mpeg"/>
+      <guid isPermaLink="false">dailypri-2026-10-30</guid>
+      <pubDate>Fri, 30 Oct 2026 06:00:00 +0100</pubDate>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>DailyPri – 29.10.2026</title>
+      <enclosure url="https://apri69.github.io/DailyPri/2026-10-29.mp3" length="3361104" type="audio/mpeg"/>
+      <guid isPermaLink="false">dailypri-2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 06:00:00 +0100</pubDate>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

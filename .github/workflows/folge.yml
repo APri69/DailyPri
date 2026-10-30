@@ -1,0 +1,46 @@
+# Veröffentlicht eine Folge, die eine Cloud-Sitzung auf einen Eingangszweig gepusht hat.
+#
+# Ablauf: Die Sitzung pusht ohne Force einen neuen Zweig folge/JJJJ-MM-TT
+# (oder claude/folge-JJJJ-MM-TT) mit der Datei eingang/JJJJ-MM-TT.mp3.
+# Dieser Workflow ruft damit das unveränderte folge-hochladen.sh auf
+# (Force-Push auf gh-pages) und löscht den Eingangszweig danach wieder.
+name: Folge veröffentlichen
+
+on:
+  push:
+    branches:
+      - "folge/**"
+      - "claude/folge-*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dailypri-gh-pages
+  cancel-in-progress: false
+
+jobs:
+  veroeffentlichen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Datum und MP3 bestimmen
+        id: folge
+        run: |
+          DATUM="$(echo "$GITHUB_REF_NAME" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' | head -1)"
+          [ -n "$DATUM" ] || { echo "Kein Datum im Zweignamen: $GITHUB_REF_NAME" >&2; exit 1; }
+          MP3="eingang/$DATUM.mp3"
+          [ -s "$MP3" ] || { echo "MP3 fehlt im Zweig: $MP3" >&2; exit 1; }
+          echo "datum=$DATUM" >> "$GITHUB_OUTPUT"
+          echo "mp3=$MP3" >> "$GITHUB_OUTPUT"
+          echo "Folge $DATUM, $(stat -c %s "$MP3") Bytes"
+
+      - name: folge-hochladen.sh
+        run: bash folge-hochladen.sh "${{ steps.folge.outputs.mp3 }}" "${{ steps.folge.outputs.datum }}"
+
+      - name: Eingangszweig löschen
+        if: success()
+        run: git push origin --delete "$GITHUB_REF_NAME"

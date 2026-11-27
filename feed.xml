@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>DailyPri</title>
+    <link>https://apri69.github.io/DailyPri/</link>
+    <description>Tägliches Morgen-Briefing zu Euro-Anleihen, EZB und Makro – nur öffentliche Quellen.</description>
+    <language>de</language>
+    <itunes:author>André Prietzel</itunes:author>
+    <itunes:image href="https://apri69.github.io/DailyPri/cover.png"/>
+    <itunes:category text="Business"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:block>Yes</itunes:block>
+    <item>
+      <title>DailyPri – 27.11.2026</title>
+      <enclosure url="https://apri69.github.io/DailyPri/2026-11-27.mp3" length="3665664" type="audio/mpeg"/>
+      <guid isPermaLink="false">dailypri-2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 06:00:00 +0100</pubDate>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>DailyPri – 26.11.2026</title>
+      <enclosure url="https://apri69.github.io/DailyPri/2026-11-26.mp3" length="3262320" type="audio/mpeg"/>
+      <guid isPermaLink="false">dailypri-2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 06:00:00 +0100</pubDate>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>DailyPri – 25.11.2026</title>
+      <enclosure url="https://apri69.github.io/DailyPri/2026-11-25.mp3" length="3340224" type="audio/mpeg"/>
+      <guid isPermaLink="false">dailypri-2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 06:00:00 +0100</pubDate>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>DailyPri – 24.11.2026</title>
+      <enclosure url="https://apri69.github.io/DailyPri/2026-11-24.mp3" length="3528864" type="audio/mpeg"/>
+      <guid isPermaLink="false">dailypri-2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 06:00:00 +0100</pubDate>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>DailyPri – 23.11.2026</title>
+      <enclosure url="https://apri69.github.io/DailyPri/2026-11-23.mp3" length="3503808" type="audio/mpeg"/>
+      <guid isPermaLink="false">dailypri-2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 06:00:00 +0100</pubDate>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
